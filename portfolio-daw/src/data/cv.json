@@ -1,0 +1,58 @@
+{
+  "about": {
+    "name": "Cristian Reyes Hernández",
+    "title": "Full Stack Python Developer",
+    "summary": "Apasionado por crear experiencias web modernas y escalables. Especializado en el ecosistema Python/Django y Vue.js. Busco transformar ideas complejas en código limpio.",
+    "image": "https://ui-avatars.com/api/?name=CR&background=0ea5e9&color=fff&size=256&bold=true"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Lumino",
+      "description": "Plataforma de enseñanza online (LMS). Gestión de cursos, alumnos y evaluaciones en tiempo real.",
+      "link": "https://github.com/tu-usuario/lumino",
+      "tags": ["Python", "Django", "PostgreSQL", "Vue.js"]
+    },
+    {
+      "id": 2,
+      "title": "Tribu",
+      "description": "Red social temática. Feed de noticias, sistema de amigos, notificaciones y chat en tiempo real.",
+      "link": "https://github.com/tu-usuario/tribu",
+      "tags": ["Python", "Django Channels", "Redis", "CSS3"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python & Django",
+      "icon": "pi pi-hashtag",
+      "description": "Desarrollo de backends robustos, APIs REST y ORM.",
+      "level": 85
+    },
+    {
+      "name": "Vue.js Ecosystem",
+      "icon": "pi pi-code",
+      "description": "Composition API, Router, Pinia y PrimeVue.",
+      "level": 75
+    },
+    {
+      "name": "Diseño UI/UX",
+      "icon": "pi pi-palette",
+      "description": "Figma, CSS Grid/Flexbox y diseño responsivo.",
+      "level": 60
+    }
+  ],
+  "experience": [
+    {
+      "role": "Técnico Superior en Desarrollo de Aplicaciones Web",
+      "company": "IES Tecnológico",
+      "date": "2024 - Actualidad",
+      "description": "Formación intensiva Full Stack. He liderado el desarrollo de proyectos complejos como 'Lumino' (Plataforma LMS con Django) y 'Tribu' (Red Social con WebSockets), aplicando metodologías ágiles y arquitecturas escalables con Python y Vue.js."
+    },
+    {
+      "role": "Técnico Superior en Administración y Finanzas",
+      "company": "Centro de Formación",
+      "date": "2022 - 2024",
+      "description": "Formación que dota a mi perfil de una gran flexibilidad y visión de negocio. Esta base me permite entender no solo el 'cómo' programar, sino el 'porqué' empresarial, facilitando la comunicación y la gestión de requisitos (Perfil Híbrido)."
+    }
+  ]
+}

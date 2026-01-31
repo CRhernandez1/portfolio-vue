@@ -1,0 +1,117 @@
+@import 'tailwindcss';
+
+/* --- CONFIGURACIÓN GLOBAL --- */
+:root {
+  /* Paleta Aurora: Fondo oscuro y luces Cyan/Violeta */
+  --color-bg: #0f172a;
+  --color-orb-1: #0d9488; /* Verde azulado */
+  --color-orb-2: #4f46e5; /* Índigo */
+
+  /* Gradiente Holográfico */
+  --holo-gradient: linear-gradient(135deg, #22d3ee, #818cf8, #c084fc);
+
+  /* Variables para efecto cristal */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --font-family: 'Inter', sans-serif;
+}
+
+/* --- FONDO ANIMADO --- */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  width: 80vw;
+  height: 80vw;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  z-index: -1;
+  animation: auroraMove 20s ease-in-out infinite alternate;
+}
+
+body::before {
+  top: -20%;
+  left: -10%;
+  background: radial-gradient(circle, var(--color-orb-1), transparent 70%);
+}
+
+body::after {
+  bottom: -20%;
+  right: -10%;
+  background: radial-gradient(circle, var(--color-orb-2), transparent 70%);
+  animation-duration: 25s;
+}
+
+@keyframes auroraMove {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(10%, 5%) scale(1.1);
+  }
+}
+
+/* --- ESTILO DE TARJETAS (Glassmorphism) --- */
+body .p-card,
+body .p-menubar,
+body .surface-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(25px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* --- TIPOGRAFÍA Y UI --- */
+body h1,
+body h2,
+body h3 {
+  font-weight: 800;
+  color: white;
+}
+
+/* Clase para textos con color degradado */
+.holo-title {
+  background: var(--holo-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Botones con estilo holográfico */
+/* Usamos 'body' para ganar prioridad sobre el tema de PrimeVue */
+body .p-button.p-button-primary {
+  background: var(--holo-gradient);
+  border: none;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+body .p-button.p-button-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* Estilo para los Inputs (Formularios) */
+body .p-inputtext,
+body .p-textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 12px;
+}
+
+body .p-inputtext:focus,
+body .p-textarea:focus {
+  border-color: #22d3ee;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.2);
+}
